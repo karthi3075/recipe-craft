@@ -1,6 +1,6 @@
 
 import { Moon, Sun } from "lucide-react";
-import { UseTheme } from "../context/useTheme";
+import { UseTheme } from "../context/useTheme.jsx";
 
 export default function Header(){
     const {dark,setDark}=UseTheme()
