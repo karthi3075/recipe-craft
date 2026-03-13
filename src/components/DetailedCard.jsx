@@ -7,8 +7,8 @@ export const DetailedCard = () => {
 
     const [data, setData] = useState({});
     const [loading, setLoading] = useState(false);
-    const { dark } = UseTheme();
-    const { id } = useParams();
+    const { dark } = UseTheme()
+    const { id } = useParams()
 
     useEffect(() => {
         fetchData();
