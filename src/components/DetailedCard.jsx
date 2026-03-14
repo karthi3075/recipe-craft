@@ -1,13 +1,13 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
-import { UseTheme } from '../context/useTheme';
+import { useTheme } from '../context/useTheme';
 
 export const DetailedCard = () => {
 
     const [data, setData] = useState({});
     const [loading, setLoading] = useState(false);
-    const { dark } = UseTheme()
+    const { dark } = useTheme()
     const { id } = useParams()
 
     useEffect(() => {

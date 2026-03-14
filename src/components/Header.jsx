@@ -1,8 +1,8 @@
 import { Moon, Sun } from "lucide-react";
-import { UseTheme } from "../context/useTheme.jsx";
+import { useTheme } from "../context/useTheme";
 
 export default function Header(){
-    const {dark,setDark}=UseTheme()
+    const {dark,setDark}=useTheme()
     return(
         <div className={`flex justify-between p-4 items-center border-b border-orange-300 ${dark?"text-white bg-black":"text-black bg-white"}`}>
             <div>

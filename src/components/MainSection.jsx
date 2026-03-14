@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { UseTheme } from '../context/useTheme'
+import { useTheme } from '../context/useTheme'
 import axios from 'axios';
 import MealCard from './MealCard';
 import { DetailedCard } from './DetailedCard';
 
 const MainSection = () => {
-    const { dark } = UseTheme();
+    const { dark } = useTheme();
     const [data, setData] = useState([]);
     const [search, setSearch] = useState("");
     const [loading, setLoading] = useState(false);
@@ -33,9 +33,7 @@ const MainSection = () => {
         setLoading(true);
         try {
             const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
-            console.log(search)
             setData(response.data.meals || [])
-            console.log(response.data)
         }
         catch (error) {
             console.log("error:", error);
